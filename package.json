@@ -1,0 +1,33 @@
+{
+  "name": "bet-fc",
+  "version": "1.0.0",
+  "description": "bet-fc with Node.js and Express 4",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "bootstrap": "^4.1.0",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0",
+    "cors": "^2.8.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmdefreitas/bet-fc"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
