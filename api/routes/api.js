@@ -1,4 +1,13 @@
-module.exports = app => {
+var express = require('express');
+var router = express.Router();
 
-  app.get('/api', (req, res) => res.json({ api: 'Garage API with NodeJS'}));
-}
+// Require controller modules.
+var ligaController = require('../controllers/ligaController');
+
+router.get('/', (req, res) => res.json([{ api : "Bet-FC API with Node.JS."}]));
+
+router.get('/liga', ligaController.list );
+
+//router.post('/liga/create', book_controller.book_create_post);
+
+module.exports = router;
