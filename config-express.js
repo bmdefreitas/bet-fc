@@ -3,9 +3,9 @@ const express = require('express')
 , cors = require('cors');
 const path = require('path');
 
-const index = require('./views/routes/index');
-const web = require('./views/routes/web');
-const api = require('./api/routes/api');
+const indexRoute = require('./views/routes/indexRoute');
+const webRoute = require('./views/routes/webRoute');
+const apiRoute = require('./api/routes/apiRoute');
 
 
 app.use(cors());
@@ -20,9 +20,9 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'internal server error' });
 });
 
-app.use('/', index);
-app.use('/web', web);
-app.use('/api', api);
+app.use('/', indexRoute);
+app.use('/web', webRoute);
+app.use('/api', apiRoute);
 
 app.use('*', (req, res) => {
     const message = `${req.originalUrl} not found`;
